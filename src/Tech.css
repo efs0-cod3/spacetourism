@@ -1,0 +1,94 @@
+:root {
+  --text: "Barlow Condensed", sans-serif;
+  --title: "Bellefair", serif;
+
+  --main-color: hsl(230, 35%, 7%);
+  --main-accent: hsl(231, 77%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --hover: #97979783;
+}
+
+.tech-container {
+  height: 100vh;
+  color: black;
+  background: url("/assets/technology/background-technology-mobile.jpg")
+    no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+.tech {
+  text-align: center;
+}
+
+.launch {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  letter-spacing: 2.7px;
+}
+
+.launch-bld {
+  color: var(--hover);
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+.circles-container {
+  display: inline-flex;
+}
+
+.tech-circles {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.activeTech {
+  background-color: var(--white);
+  color: var(--main-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.tech-img {
+  width: 100%;
+}
+
+.description {
+  padding: 0 24px;
+}
+
+.terminology {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--main-accent);
+  letter-spacing: 2.36px;
+}
+
+h1 {
+  font-family: var(--title);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 10px 0;
+  padding-top: 9px;
+}
+
+.desc {
+  padding-top:16px ;
+  font-weight: 100;
+  line-height: 25px;
+  font-size: 1rem;
+  color: var(--main-accent);
+}
+
+.img-container {
+        margin: 30px 0 10px;
+}

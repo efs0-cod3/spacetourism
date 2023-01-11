@@ -1,0 +1,72 @@
+:root {
+    --text: "Barlow Condensed", sans-serif;
+    --title: "Bellefair", serif;
+  
+    --main-color: hsl(230, 35%, 7%);
+    --main-accent: hsl(231, 77%, 90%);
+    --white: hsl(0, 0%, 100%);
+    --hover: #97979783;
+  }
+
+/* home */
+.home {
+    text-align: center;
+    background: url("/assets/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: var(--white);
+    overflow: hidden;
+  
+  }
+  
+  .home-info {
+      padding: 24px;
+  }
+  
+  h1 {
+    font-family: var(--title);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 5rem;
+    padding: 20px 0;
+  }
+  
+  .home-h2 {
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+  }
+  
+  .home-h2,
+  .home-text {
+    font-weight: 100;
+    color: var(--main-accent);
+  }
+  
+  .home-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  
+  .explore-btn {
+    font-family: var(--title);
+    font-size: 1.5rem;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 85px;
+    cursor: pointer;
+    background: var(--white);
+    color: var(--main-color);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .explore-btn:hover {
+    box-shadow: 0px 0px 0px 20px var(--hover);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  /* home */

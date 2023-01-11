@@ -1,0 +1,95 @@
+:root {
+    --text: "Barlow Condensed", sans-serif;
+    --title: "Bellefair", serif;
+  
+    --main-color: hsl(230, 35%, 7%);
+    --main-accent: hsl(231, 77%, 90%);
+    --white: hsl(0, 0%, 100%);
+    --hover: #97979783;
+  }
+
+.crew {
+    background-image: url('/assets/crew/background-crew-mobile.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.crew-info {
+    padding: 0 24px;
+}
+
+.meet{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    letter-spacing: 2.7px;
+}
+
+.meet-bld {
+    color: var(--hover);
+    margin-right: 5px;
+    font-weight: 500;
+  }
+
+  .circles {
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    background-color: var(--hover);
+    border-radius: 50%;
+    margin: 30px 10px ;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+  }
+
+  .circle:hover {
+    background-color: var(--white);
+    transition: all .3s ease-in-out;
+  }
+
+  .active {
+    background-color: var(--white);
+    transition: all .3s ease-in-out;
+
+  }
+
+  .num {
+    opacity: 0;
+  }
+
+  .crew-img-section {
+   padding: 50px 0 0;
+   border-bottom: solid var(--hover) 1px;
+  }
+
+  .crewMemberImg {
+    height: 223px;
+    margin-bottom: -4px ;
+}
+
+.role, .name {
+    font-weight: 300;
+    font-family: var(--title);
+    text-transform: uppercase;
+    padding: 3px;
+}
+
+.role {
+    color: var(--hover);
+}
+
+.bio {
+    line-height: 25px;
+    margin-top: 10px;
+    color: var(--main-accent);
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+  

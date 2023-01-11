@@ -3,12 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-:root {
-  --title: 'Barlow Condensed', sans-serif;
-  --text: 'Bellefair', serif;
-
-  --main-color: hsl(230, 35%, 7%);
-  --main-accent: hsl(231, 77%, 90%);
-  --white: hsl(0, 0%,100%)
-}
