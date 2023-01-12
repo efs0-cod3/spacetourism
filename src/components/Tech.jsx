@@ -30,9 +30,9 @@ export default function Tech(props) {
             <span className="launch-bld">03</span> Space Launch 101
           </h2>
         </div>
-        {techFiltered.map((el) => {
+        {techFiltered.map((el, i) => {
           return (
-            <section className="info">
+            <section className="info" key={i}>
               <div className="img-container">
                 <img className="tech-img" src={el.images.landscape} />
               </div>
@@ -40,9 +40,7 @@ export default function Tech(props) {
               <section className="description">
                 <h2 className="terminology">The terminology...</h2>
                 <h1>{el.name}</h1>
-                <p className="desc">
-                    {el.description}
-                </p>
+                <p className="desc">{el.description}</p>
               </section>
             </section>
           );

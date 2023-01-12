@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../Destination.css'
+import "../Destination.css";
 import MobileNavbar from "./MobileNavbar";
 
 export default function Moon(props) {
@@ -32,33 +32,28 @@ export default function Moon(props) {
         <h2 className="pick">
           <span className="moon-bld">01</span> Pick your destination
         </h2>
-        {
-          eachElements.map(el => {
-            return (
-              <div className="destinations">
-          <img
-            className="location-img"
-            src={el.images.png}
-          />
-          <ul className="locations">{locations}</ul>
-          <section className="destination-info">
-            <h1 className="destination-h1">{el.name}</h1>
-            <p className="destination-description">{el.description}</p>
-          </section>
-          <section className="distance">
-            <div>
-              <p className="detail">avg. distance</p>
-              <h2 className="travelDist">{el.distance}</h2>
+        {eachElements.map((el, i) => {
+          return (
+            <div className="destinations" key={i}>
+              <img className="location-img" src={el.images.png} />
+              <ul className="locations">{locations}</ul>
+              <section className="destination-info">
+                <h1 className="destination-h1">{el.name}</h1>
+                <p className="destination-description">{el.description}</p>
+              </section>
+              <section className="distance">
+                <div>
+                  <p className="detail">avg. distance</p>
+                  <h2 className="travelDist">{el.distance}</h2>
+                </div>
+                <div>
+                  <p className="detail">Est. Travel Time</p>
+                  <h2 className="travelDist">{el.travel}</h2>
+                </div>
+              </section>
             </div>
-            <div>
-              <p className="detail">Est. Travel Time</p>
-              <h2 className="travelDist">{el.travel}</h2>
-            </div>
-          </section>
-        </div>
-            )
-          })
-        }
+          );
+        })}
       </div>
     </div>
   );

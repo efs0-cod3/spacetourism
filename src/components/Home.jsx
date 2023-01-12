@@ -1,6 +1,7 @@
 import React from "react";
 import MobileNavbar from "./MobileNavbar";
 import '../Home.css'
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           back, and relax because we’ll give you a truly out of this world
           experience!
         </p>
-        <button className="explore-btn">Explore</button>
+        <Link to={'/Destinations'}><button className="explore-btn">Explore</button></Link>
       </div>
     </div>
   );
