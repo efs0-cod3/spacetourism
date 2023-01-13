@@ -113,4 +113,53 @@ a {
   padding-right: 10px;
 }
 
+/* tablet */
+@media all and (min-width: 700px) {
+.navbar {
+  padding: 24px 39px;
+}
 
+  .hidden-ham, .ham-icon, .close-icon {
+    display: none;
+  }
+
+  .hide-menu {
+    opacity: 1;
+    height:0;
+    right: 0;
+  }
+
+  .backg {
+    background: none;
+    height: 0;
+  }
+
+ .mobile_menu--list {
+  display: flex;
+  top: 0;
+  padding: 20px 39px 0;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 4%);
+ }
+
+ li {
+  padding-bottom: 20px;
+ }
+
+ .bld{
+  display: none;
+ }
+
+ a:hover {
+  border-bottom: solid var(--hover);
+ }
+ 
+ .active {
+  background: none;
+  border-bottom: solid var(--main-accent);
+ }
+
+ .logo:hover {
+  border-bottom: none;
+ }
+}

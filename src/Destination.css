@@ -1,38 +1,38 @@
 /* moon */
 .moon_container {
-    background-image: url('/assets/destination/background-destination-mobile.jpg');
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: scroll;
+  background-image: url("/assets/destination/background-destination-mobile.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
 }
 .moon {
-    text-align: center;
+  text-align: center;
 }
 .pick {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: lighter;
-    letter-spacing: 2.7px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  letter-spacing: 2.7px;
 }
 
 .moon-bld {
-    color: var(--hover);
-    margin-right: 5px;
-    font-weight: 500;
-  }
+  color: var(--hover);
+  margin-right: 5px;
+  font-weight: 500;
+}
 
 .destinations {
-display: flex;
-flex-direction: column;
-justify-content: center;
-padding: 24px;
-/* margin: 0 24px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  /* margin: 0 24px; */
 }
 
 .destination-info {
   padding-bottom: 20px;
-  border-bottom: solid var(--hover) 1px;
+  border-bottom: #383B4B 1px solid;
 }
 
 .locations {
@@ -59,9 +59,8 @@ padding: 24px;
   text-transform: uppercase;
   letter-spacing: 2.36px;
   color: var(--main-accent);
-  opacity: .8;
-  transition: all .3s ease-in-out;
-
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
 }
 
 .locations-names:hover {
@@ -70,7 +69,7 @@ padding: 24px;
 
 .active_des {
   border-bottom: solid 3px var(--main-accent);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 1s;
   color: var(--white);
 }
@@ -97,8 +96,55 @@ padding: 24px;
 }
 
 .travelDist {
-    font-family: var(--title);
-    font-size: 2rem;
-    font-weight: 100;
-    padding: 10px 0 ;
+  font-family: var(--title);
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 10px 0;
 }
+
+/* | tablet | */
+@media all and (min-width: 700px) {
+  .moon {
+    padding: 40px 39px;
+  }
+  .pick {
+    text-align: left;
+    padding-bottom: 46px;
+  }
+
+  .locations {
+    justify-content: center;
+    margin-top: 53px;
+    margin-bottom: 32px;
+  }
+
+  .locations-names {
+    letter-spacing: 2.7px;
+    margin: 0 17.5px;
+    padding-bottom: 12px;
+  }
+
+  .destinations {
+    padding-left: 58px;
+    padding-right: 58px; 
+  }
+
+  .destination-h1 {
+    font-size: 5.5rem;
+  }
+
+  .destination-description {
+    font-size: 1.2rem;
+  }
+
+  .distance {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 28px;
+  }
+}
+/* ^ tablet ^ */
+
+/* | desktop | */
+/* @media all and (min-width: 700px){} */
+/* ^ desktop ^ */

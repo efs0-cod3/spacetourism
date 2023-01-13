@@ -8,37 +8,36 @@ export default function Crew(props) {
 
     const crewCircles = crew.map((el, i) => {
         return (
-            <div className={"circle " + (index === i ? "active" : "")} onClick={() => getCrewMember(i)}>
+            <div key={i} className={"circle " + (index === i ? "c-active" : "")} onClick={() => getCrewMember(i)}>
                        <p className="num">{i}</p>
                     </div>
         )
     })
 
-    const crewElements = crew.map((el,i) => {
-        return (
-            <div className="crew-info">
-                <section className="crew-img-section">
-                <img className="crewMemberImg" src={el.images.png}/>
-                </section>
-                <section>
-                    <div className="circles">
-                    {crewCircles}
-                    </div>
-                    <section>
-                        <h3>{el.role}</h3>
-                        <h2>{el.name}</h2>
-                        <div>
-                            <p>{el.bio}</p>
-                        </div>
-                    </section>
-                </section>
-            </div>
-        )
-    })
+    // const crewElements = crew.map((el,i) => {
+    //     return (
+    //         <div className="crew-info">
+    //             <section className="crew-img-section">
+    //             <img className="crewMemberImg" src={el.images.png}/>
+    //             </section>
+    //             <section>
+    //                 <div className="circles">
+    //                 {crewCircles}
+    //                 </div>
+    //                 <section>
+    //                     <h3>{el.role}</h3>
+    //                     <h2>{el.name}</h2>
+    //                     <div>
+    //                         <p>{el.bio}</p>
+    //                     </div>
+    //                 </section>
+    //             </section>
+    //         </div>
+    //     )
+    // })
 
     const eachCrewMember = crew.filter((el, i) => i === index)
 
-    console.log(eachCrewMember);
 
   function getCrewMember(e) {
     setIndex(e)
@@ -54,9 +53,9 @@ export default function Crew(props) {
         <h2 className="meet">
           <span className="meet-bld">02</span> meet your crew
         </h2>
-        { eachCrewMember.map(el => {
+        { eachCrewMember.map((el,i) => {
             return (
-                <div className="crew-info">
+                <div className="crew-info" key={i}>
                 <section className="crew-img-section">
                 <img className="crewMemberImg" src={el.images.png}/>
                 </section>

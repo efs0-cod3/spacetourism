@@ -1,15 +1,23 @@
-import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Outlet, NavLink, Link } from "react-router-dom";
 
 export default function MobileNavbar() {
   const [show, setShow] = useState(false);
+  const [menuName, setMenuName] = useState('HOME')
+
   function showMenu() {
     setShow((prevValue) => !prevValue);
   }
 
+  function menuActive(e){
+    setMenuName(prevName => prevName = e.target.innerText)
+  }
+
+  
+
   return (
     <nav className="navbar">
-      <Link to={'/'}><img src="/assets/shared/logo.svg" alt="logo-img" /></Link>
+      <Link className="logo" to={'/'}><img src="/assets/shared/logo.svg" alt="logo-img" /></Link>
       <div className="mobile">
         <img
           onClick={showMenu}
@@ -25,26 +33,26 @@ export default function MobileNavbar() {
             alt="manu-icon"
           />
           <ul className="mobile_menu--list">
-            <li>
-              <Link to={"/"}>
+              <NavLink onClick={menuActive} to={"/"}>
+            <li className={menuName == 'HOME' ? 'li-active' : ''}>
                 <span className="bld">00</span>Home
-              </Link>
             </li>
-            <li>
-              <Link to={"/Destinations"}>
+              </NavLink>
+              <NavLink onClick={menuActive} to={"/Destinations"}>
+            <li  className={menuName == 'DESTINATIONS' ? 'li-active' : ''}>
                 <span className="bld">01</span> Destinations
-              </Link>
             </li>
-            <li>
-              <Link to={"/Crew"}>
+              </NavLink>
+              <NavLink onClick={menuActive} to={"/Crew"}>
+            <li  className={menuName === 'CREW' ? 'li-active' : ''}>
                 <span className="bld">02</span>Crew
-              </Link>
             </li>
-            <li>
-              <Link to={"/Technologies"}>
+              </NavLink>
+              <NavLink onClick={menuActive} to={"/Technologies"}>
+            <li  className={menuName === 'TECHNOLOGY' ? 'li-active' : ''}>
                 <span className="bld">03</span>Technology
-              </Link>
             </li>
+              </NavLink>
           </ul>
         </div>
       </div>

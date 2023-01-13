@@ -39,7 +39,7 @@ export default function Tech(props) {
               <div className="circles-container">{numbersCircles}</div>
               <section className="description">
                 <h2 className="terminology">The terminology...</h2>
-                <h1>{el.name}</h1>
+                <h1 className="tech-name">{el.name}</h1>
                 <p className="desc">{el.description}</p>
               </section>
             </section>

@@ -24,7 +24,7 @@
       padding: 24px;
   }
   
-  h1 {
+  .space {
     font-family: var(--title);
     text-transform: uppercase;
     font-weight: 100;
@@ -70,3 +70,25 @@
     transition: box-shadow 0.3s ease-in-out;
   }
   /* home */
+
+  /* TABLET */
+
+  @media all and (min-width: 700px) {
+    .home-info {
+      padding: 106px 129px
+    }
+
+    .home-h2 {
+      font-size: 1rem;
+    }
+
+    .space {
+      font-size: 9rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .home-text {
+      font-size: 1rem;
+    }
+  }
