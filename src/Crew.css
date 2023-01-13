@@ -92,4 +92,51 @@
     font-weight: 100;
     font-size: 1.1rem;
 }
-  
+  /* mob */
+
+
+  /* | tablet | */
+  @media all and (min-width: 700px) {
+    .crew {
+      height: 100%;
+    }
+    .meet {
+      text-align: left;
+      padding: 40px 39px;
+      padding-bottom: 60px;
+    }
+    
+    .crew-info {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+   .crew-img-section{
+    border-bottom: none;
+   }
+
+   .crewMemberImg {
+    height: 572px;
+   }
+
+    .member-info{
+      display:flex ;
+      flex-direction: column-reverse;
+      padding: 0 155px
+    }
+
+    .bio {
+      font-size: 1rem;
+      line-height: 28px;
+    }
+
+    .name {
+      font-size: 2rem;
+    }
+
+    .role {
+      font-size: 1.8;
+      line-height: 1;
+    }
+    
+  }

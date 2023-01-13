@@ -14,28 +14,6 @@ export default function Crew(props) {
         )
     })
 
-    // const crewElements = crew.map((el,i) => {
-    //     return (
-    //         <div className="crew-info">
-    //             <section className="crew-img-section">
-    //             <img className="crewMemberImg" src={el.images.png}/>
-    //             </section>
-    //             <section>
-    //                 <div className="circles">
-    //                 {crewCircles}
-    //                 </div>
-    //                 <section>
-    //                     <h3>{el.role}</h3>
-    //                     <h2>{el.name}</h2>
-    //                     <div>
-    //                         <p>{el.bio}</p>
-    //                     </div>
-    //                 </section>
-    //             </section>
-    //         </div>
-    //     )
-    // })
-
     const eachCrewMember = crew.filter((el, i) => i === index)
 
 
@@ -59,7 +37,7 @@ export default function Crew(props) {
                 <section className="crew-img-section">
                 <img className="crewMemberImg" src={el.images.png}/>
                 </section>
-                <section>
+                <section className="member-info">
                     <div className="circles">
                     {crewCircles}
                     </div>
